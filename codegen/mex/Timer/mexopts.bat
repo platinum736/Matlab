@@ -1,0 +1,13 @@
+set COMPILER=lcc 
+				set COMPFLAGS=-c -noregistrylookup -DMX_COMPAT_32  -DMATLAB_MEX_FILE -I"C:\Program Files\MATLAB\R2014a\sys\lcc\include" -I"C:\Program Files\MATLAB\R2014a\extern\include" -I"C:\Program Files\MATLAB\R2014a\simulink\include" -I"C:\Program Files\MATLAB\R2014a\sys\lcc\mex"   
+				set OPTIMFLAGS= -DNDEBUG 
+				set DEBUGFLAGS=-g4 
+				set LINKER="C:\Program Files\MATLAB\R2014a\sys\lcc\bin\lcclnk" 
+				set LINKFLAGS= -dll "%MATLAB%\extern\lib\win32\lcc\%ENTRYPOINT%.def" -L"C:\Program Files\MATLAB\R2014a\sys\lcc\lib" -libpath "C:\Program Files\MATLAB\R2014a\extern\lib\win32\lcc" -libpath "C:\Program Files\MATLAB\R2014a\lib\win32" "%LIB_NAME%2.obj"
+				set LINKFLAGSPOST=libmx.lib libmex.lib libmat.lib 
+				set LINKDEBUGFLAGS=
+				set NAME_OUTPUT=/out:"%OUTDIR%%MEX_NAME%%MEX_EXT%"
+set PATH=C:\Program Files\MATLAB\R2014a\sys\lcc\bin;C:\Program Files\MATLAB\R2014a\sys\lcc\include;C:\Program Files\MATLAB\R2014a\sys\lcc\mex;C:\Program Files\MATLAB\R2014a\extern\lib\win32\lcc;C:\Program Files\MATLAB\R2014a\extern\include\win32\;C:\Program Files\MATLAB\R2014a\extern\include;C:\Program Files\MATLAB\R2014a\simulink\include;C:\Program Files\MATLAB\R2014a\lib\win32;%MATLAB_BIN%;%PATH%
+set INCLUDE=C:\Program Files\MATLAB\R2014a\extern\include;;%INCLUDE%
+set LIB=C:\Program Files\MATLAB\R2014a\lib\win32;C:\Program Files\MATLAB\R2014a\extern\lib\win32\lcc;;%LIB%
+set LIBPATH=C:\Program Files\MATLAB\R2014a\extern\lib\win32\lcc;C:\Program Files\MATLAB\R2014a\sys\lcc\lib\;C:\Program Files\MATLAB\R2014a\sys\lcc\mex;%LIBPATH%
