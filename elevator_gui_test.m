@@ -22,7 +22,7 @@ function varargout = elevator_gui_test(varargin)
 
 % Edit the above text to modify the response to help elevator_gui_test
 
-% Last Modified by GUIDE v2.5 08-Feb-2015 13:33:22
+% Last Modified by GUIDE v2.5 03-Mar-2015 12:29:09
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -41,8 +41,11 @@ if nargout
 else
     gui_mainfcn(gui_State, varargin{:});
 end
-open_system('elevator_test')
-set_param('elevator_test','SimulationCommand','start')
+%open_system('elevator_alt')
+%set_param('elevator_alt','SimulationCommand','start')
+
+open_system('elevator_work2')
+set_param('elevator_work2','SimulationCommand','start')
 % End initialization code - DO NOT EDIT
 
 
@@ -81,88 +84,52 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-set_param('elevator_test/Internal-User','value','0')
-set_param('elevator_test/Constant','value','1')
-set_param('elevator_test/Internal-User','value','1')
+set_param('elevator_work2/Control','value','1')
+set_param('elevator_work2/UserInput','value','1')
+%set_param('elevator_alt/Constant','value','0')
 
 % --- Executes on button press in pushbutton2.
 function pushbutton2_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton2 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-set_param('elevator_test/Internal-User','value','0')
-set_param('elevator_test/Constant','value','2')
-set_param('elevator_test/Internal-User','value','1')
+set_param('elevator_work2/Control','value','1')
+set_param('elevator_work2/UserInput','value','2')
+%set_param('elevator_alt/Constant','value','1')
 
 % --- Executes on button press in pushbutton3.
 function pushbutton3_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton3 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-set_param('elevator_test/Internal-User','value','0')
-set_param('elevator_test/Constant','value','3')
-set_param('elevator_test/Internal-User','value','1')
+set_param('elevator_work2/Control','value','1')
+set_param('elevator_work2/UserInput','value','3')
+%set_param('elevator_alt/Constant','value','2')
 
 % --- Executes on button press in pushbutton4.
 function pushbutton4_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton4 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-set_param('elevator_test/Internal-User','value','0')
-set_param('elevator_test/Constant','value','4')
-set_param('elevator_test/Internal-User','value','1')
+set_param('elevator_work2/Control','value','1')
+set_param('elevator_work2/UserInput','value','4')
+%set_param('elevator_test/Internal-User','value','0')
+%set_param('elevator_alt/Constant','value','3')
 % --- Executes on button press in pushbutton5.
 function pushbutton5_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton5 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-set_param('elevator_test/Internal-User','value','0')
-set_param('elevator_test/Constant','value','5')
-set_param('elevator_test/Internal-User','value','1')
-% --- If Enable == 'on', executes on mouse press in 5 pixel border.
-% --- Otherwise, executes on mouse press in 5 pixel border or over pushbutton1.
-function pushbutton1_ButtonDownFcn(hObject, eventdata, handles)
-% hObject    handle to pushbutton1 (see GCBO)
+set_param('elevator_work2/Control','value','1')
+set_param('elevator_work2/UserInput','value','5')
+%set_param('elevator_test/Internal-User','value','0')
+%set_param('elevator_alt/Constant','value','4')
+%set(0,'DefaultUicontrolCreateFcn','set(gcbo,'BackgroundColor','white')')
+
+
+% --- Executes on button press in pushbutton6.
+function pushbutton6_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton6 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-
-
-
-% --- If Enable == 'on', executes on mouse press in 5 pixel border.
-% --- Otherwise, executes on mouse press in 5 pixel border or over pushbutton5.
-function pushbutton5_ButtonDownFcn(hObject, ~, handles)
-% hObject    handle to pushbutton5 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-set_param('untitled_test/Constant2','value','2')
-disp(2)
-
-% --- If Enable == 'on', executes on mouse press in 5 pixel border.
-% --- Otherwise, executes on mouse press in 5 pixel border or over pushbutton2.
-function pushbutton2_ButtonDownFcn(hObject, eventdata, handles)
-% hObject    handle to pushbutton2 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-set_param('untitled_test/Constant1','value','0')
-disp(3)
-
-
-% --- If Enable == 'on', executes on mouse press in 5 pixel border.
-% --- Otherwise, executes on mouse press in 5 pixel border or over pushbutton3.
-function pushbutton3_ButtonDownFcn(hObject, eventdata, handles)
-% hObject    handle to pushbutton3 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-set_param('untitled_test/Constant','value','3')
-disp(3)
-x
-
-
-% --- If Enable == 'on', executes on mouse press in 5 pixel border.
-% --- Otherwise, executes on mouse press in 5 pixel border or over pushbutton4.
-function pushbutton4_ButtonDownFcn(hObject, eventdata, handles)
-% hObject    handle to pushbutton4 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-set_param('untitled_test/Constant','value','4')
-disp(4)
+set_param('elevator_work2/Control','value','0')
